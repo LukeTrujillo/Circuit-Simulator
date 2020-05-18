@@ -1,13 +1,9 @@
 <?php
 
-namespace LukeTrujillo\CircuitSimulator;
+namespace LukeTrujillo\CircuitSimulatorPackage\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
-/*
-  Package imports here
- */
-use CircuitSimulator;
+use LukeTrujillo\CircuitSimulator\Circuit\Circuit;
 
 class CircuitSimulatorServiceProvider extends ServiceProvider
 {
@@ -26,10 +22,11 @@ class CircuitSimulatorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(CircuitSimulator::class, function () {
-            return new CircuitSimulator();
-        });
 
-        $this->app->alias(CircuitSimulator::class, 'circuit-simulator');
+        $this->app->bind('circuitsimulator', 'CircuitSimulator');
+
+        $this->app->singleton('circuit', function($app) {
+          return new Circuit();
+        });
     }
 }

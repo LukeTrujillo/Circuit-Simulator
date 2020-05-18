@@ -1,10 +1,10 @@
 <?php
 
-namespace LukeTrujillo\CircuitSimulator\Test;
+namespace LukeTrujillo\CircuitSimulatorPackage\Test;
 
-use LukeTrujillo\CircuitSimulator\CircuitSimulatorServiceProvider;
-use LukeTrujillo\CircuitSimulator\CircuitSimulatorFacade;
-use LukeTrujillo\CircuitSimulator\CircuitSimulator;
+use LukeTrujillo\CircuitSimulatorPackage\Providers\CircuitSimulatorServiceProvider;
+use LukeTrujillo\CircuitSimulatorPackage\CircuitSimulator;
+use LukeTrujillo\CircuitSimulatorPackage\Circuit\Circuit;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
@@ -27,6 +27,7 @@ class TestCase extends OrchestraTestCase {
     {
         return [
             'CircuitSimulator' => CircuitSimulator::class,
+            'circuit' => Circuit::class
         ];
     }
 }

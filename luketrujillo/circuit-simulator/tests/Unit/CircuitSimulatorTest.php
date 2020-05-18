@@ -1,8 +1,8 @@
 <?php
 
-namespace LukeTrujillo\CircuitSimulator\Test;
+namespace LukeTrujillo\CircuitSimulatorPackage\Test;
 
-use CircuitSimulator;
+use LukeTrujillo\CircuitSimulatorPackage\CircuitSimulator;
 
 class CircuitSimulatorTest extends TestCase {
 

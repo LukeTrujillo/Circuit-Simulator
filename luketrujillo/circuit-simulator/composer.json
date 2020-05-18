@@ -12,16 +12,26 @@
     "require": {},
     "autoload": {
       "psr-4": {
-        "LukeTrujillo\\CircuitSimulator\\": "src/"
+        "LukeTrujillo\\CircuitSimulatorPackage\\": "src/"
       }
     },
     "autoload-dev": {
       "psr-4": {
-        "LukeTrujillo\\CircuitSimulator\\Test\\": "tests/"
+        "LukeTrujillo\\CircuitSimulatorPackage\\Test\\": "tests/"
       }
     },
     "require-dev": {
         "phpunit/phpunit": "8.5.x-dev",
         "orchestra/testbench": "4.x-dev"
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "LukeTrujillo\\CircuitSimulatorPackage\\Providers\\CircuitSimulatorServiceProvider"
+        ],
+        "aliases": {
+          "Circuit": "LukeTrujillo\\CircuitSimulatorPackage\\Facades\\Circuit"
+        }
+      }
     }
 }

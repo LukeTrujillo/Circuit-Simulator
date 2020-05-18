@@ -1,6 +1,6 @@
 <?php
 
-namespace LukeTrujillo\CircuitSimulator;
+namespace LukeTrujillo\CircuitSimulatorPackage;
 
 class CircuitSimulator {
 
