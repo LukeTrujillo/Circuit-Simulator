@@ -1,0 +1,19 @@
+{
+    "name": "luketrujillo/circuit-simulator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luke Trujillo",
+            "email": "lrtrujillo@wpi.edu"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "LukeTrujillo\\CircuitSimulator\\": "src/"
+      }
+    }
+
+}
